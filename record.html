@@ -25,13 +25,23 @@
 
     <section id="new-entry" class="section" style="display:block;">
       <h2>New Entry</h2>
-      <textarea placeholder="How are you feeling today?"></textarea>
-      <button>Save</button>
+      <label>
+        Mood:
+        <select id="new-mood">
+          <option>😊 Happy</option>
+          <option>😌 Relaxed</option>
+          <option>😕 Anxious</option>
+          <option>😴 Tired</option>
+          <option>🤩 Excited</option>
+        </select>
+      </label>
+      <textarea id="new-note" placeholder="How are you feeling today?"></textarea>
+      <button id="save-entry">Save</button>
     </section>
 
     <section id="past-entries" class="section" style="display:none;">
       <h2>Past Entries</h2>
-      <p>No entries yet.</p>
+      <div id="entries"></div>
     </section>
 
     <section id="ai-insights" class="section" style="display:none;">
@@ -39,5 +49,7 @@
       <p>Emotion summary will appear here.</p>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
